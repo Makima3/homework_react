@@ -1,11 +1,14 @@
 import css from "./Post.module.css"
-const User = () => {
+const Post = ({postItem}) => {
+
+    const {id, title} = postItem;
     return (
-        <div>
-            App
+        <div className={css.Post}>
+            <div>Id:{postItem.id}</div>
+            <div>Title:{postItem.title}</div>
         </div>
     );
 };
 
-export {User};
+export {Post};
 
