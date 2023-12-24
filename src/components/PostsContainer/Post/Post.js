@@ -5,6 +5,7 @@ const {id, title} = postItem
         <div className={css.Post}>
             <div>id :{postItem.id}</div>
             <div>title:{postItem.title}</div>
+            <button>Details</button>
         </div>
     );
 };
