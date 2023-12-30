@@ -1,7 +1,9 @@
+import {SpaceXpost} from "./components/spaceX/SpaceXpost";
+
 const App = () => {
   return (
       <div>
-        App
+        <SpaceXpost/>
       </div>
   );
 };
