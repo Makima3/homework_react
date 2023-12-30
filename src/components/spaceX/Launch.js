@@ -1,7 +1,7 @@
-const SpaceXpost = ({item}) => {
+const Launch = ({item}) => {
 
 
-    const {mission_name, launch_year, mission_patch_small } = item
+    const {mission_name, launch_year, links: {mission_patch_small} } = item
 
     return (
         <div>
@@ -13,5 +13,5 @@ const SpaceXpost = ({item}) => {
     );
 };
 
-export {SpaceXpost};
+export {Launch};
 

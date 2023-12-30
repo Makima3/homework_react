@@ -1,9 +1,9 @@
-import {SpaceXpost} from "./components/spaceX/SpaceXpost";
+import {Launches} from "./components/spaceX/Launches";
 
 const App = () => {
   return (
       <div>
-        <SpaceXpost/>
+        <Launches/>
       </div>
   );
 };
