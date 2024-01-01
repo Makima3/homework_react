@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {UserForm} from "./UserForm";
 import {Users} from "./Users";
-import {usersService} from "../Services/UsersService";
+import {usersService} from "../../Services/UsersService";
 
 const UsersContainer = () => {
 

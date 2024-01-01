@@ -1,10 +1,9 @@
-import {Users} from "./UserContainer/Users";
-import {Comments} from "./CommentContainer/Comments";
+import {Users} from "./Components/UserContainer/Users";
 
 const App = () => {
   return (
       <div>
-        <Comments/>
+        <Users/>
       </div>
   );
 };
