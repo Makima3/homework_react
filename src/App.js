@@ -1,7 +1,10 @@
+import {Users} from "./UserContainer/Users";
+import {Comments} from "./CommentContainer/Comments";
+
 const App = () => {
   return (
       <div>
-        App
+        <Comments/>
       </div>
   );
 };
