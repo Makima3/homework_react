@@ -12,7 +12,7 @@ import {commentService} from "../Services/commentService";
 
     return (
         <div>
-            <CommentForm/>
+            <CommentForm setComments={setComments}/>
             <hr/>
             <Comments comments={comments}/>
         </div>
