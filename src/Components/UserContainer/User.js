@@ -6,6 +6,8 @@ const User = ({user}) => {
             <div>name:{name}</div>
             <div>username:{username}</div>
             <div>email:{email}</div>
+            <hr/>
+            <hr/>
         </div>
     );
 };
