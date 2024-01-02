@@ -1,7 +1,12 @@
 import {axiosService} from "./AxiosService";
-import {baseURL, urls} from "../Const/url";
+import {urls} from "../Const/url";
 
-export const usersService ={
+const usersService ={
     getAll:()=> axiosService.get(urls.users),
-    create:(post)=> axiosService.create(urls.users, post)
+    create:(user)=>axiosService.post(urls.users, user)
+
+}
+
+export {
+    usersService
 }

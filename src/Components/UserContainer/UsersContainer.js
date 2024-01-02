@@ -1,23 +1,22 @@
-import {useEffect, useState} from "react";
 import {UserForm} from "./UserForm";
 import {Users} from "./Users";
+import {useEffect, useState} from "react";
 import {usersService} from "../../Services/UsersService";
 
 const UsersContainer = () => {
+    const [users, setUsers] = useState([])
 
-    const [users, setUser] = useState([])
+    useEffect(() => {
+        usersService.getAll().then(({data}) => setUsers(data))
 
-    useEffect(()=>{
-usersService.getAll.then(({data})=> setUser(data))
     }, [])
-
 
 
     return (
         <div>
             <UserForm/>
             <hr/>
-            <Users users = {users}/>
+            <Users users={users}/>
         </div>
     );
 };

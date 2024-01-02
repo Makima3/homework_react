@@ -1,13 +1,12 @@
-const baseURL = 'https://jsonplaceholder.typicode.com'
+const baseURL = 'https://jsonplaceholder.typicode.com/'
 
-const  users= '/users';
+const users = '/users'
 
-const urls ={
-    users,
-
+const urls = {
+    users
 }
 
-export{
-    baseURL,
-    urls
+export {
+    urls,
+    baseURL
 }
