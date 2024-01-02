@@ -1,4 +1,4 @@
-const CommentForm = () => {
+ export const CommentForm = () => {
     return (
         <div>
             CommentForm
@@ -6,5 +6,4 @@ const CommentForm = () => {
     );
 };
 
-export {CommentForm};
 

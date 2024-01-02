@@ -1,7 +1,9 @@
+import {CommentContainer} from "./Components/CommentContainer";
+
 const App = () => {
   return (
       <div>
-        App
+        <CommentContainer/>
       </div>
   );
 };

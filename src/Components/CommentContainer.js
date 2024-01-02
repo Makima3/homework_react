@@ -1,15 +1,22 @@
 import {CommentForm} from "./CommentForm";
 import {Comments} from "./Comments";
+import {useEffect, useState} from "react";
+import {commentService} from "../Services/commentService";
 
-const CommentContainer = () => {
+ export const CommentContainer = () => {
+     const [comments, setComments]= useState([])
+
+     useEffect(()=> {
+         commentService.getAll().then(({data})=> setComments(data))
+     }, [])
+
     return (
         <div>
             <CommentForm/>
             <hr/>
-            <Comments/>
+            <Comments comments={comments}/>
         </div>
     );
 };
 
-export {CommentContainer};
 
