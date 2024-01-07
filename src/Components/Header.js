@@ -1,9 +1,12 @@
 import css from './Header.module.css'
+import {NavLink} from "react-router-dom";
 
 const Header = () => {
     return (
         <div className={css.Header}>
-            Header
+            <NavLink to={"/todos"}>List</NavLink>
+            <NavLink to={"/albums"}>Albums</NavLink>
+            <NavLink to={"/comments"}>Comments</NavLink>
         </div>
     );
 };

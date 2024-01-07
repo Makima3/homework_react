@@ -2,8 +2,18 @@
     display: flex;
     height: 70px;
     background-color: lavender;
-    color: royalblue;
     font-size: 30px;
     justify-content: space-around;
     align-items: center;
+
+}
+
+.Header a{
+    text-decoration: none;
+    color: #070015;
+}
+
+
+.Header a[class='active']{
+    color: #2c25da;
 }
