@@ -1,7 +1,9 @@
+import {Albums} from "../Components/AlbumsContein/Albums";
+
 const AlbumsPage = () => {
     return (
         <div>
-            AlbumsPage
+            <Albums/>
         </div>
     );
 };
