@@ -1,3 +1,4 @@
 .Album {
-    border: darkred  dotted 2px;
+    border: darkred  dashed 2px;
+    font-size: 25px;
 }

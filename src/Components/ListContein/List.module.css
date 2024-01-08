@@ -1,3 +1,4 @@
 .List{
-    border: double 2px darkgreen ;
+    border: dashed 2px darkred ;
+    font-size: 25px;
 }

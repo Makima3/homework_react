@@ -10,6 +10,7 @@ const Comment = ({comment}) => {
                 <div>name: {name}</div>
                 <div>email: {email}</div>
                 <div>body: {body}</div>
+                <button className={css.Button}>Show posts</button>
             </div>
             <hr/>
         </>
