@@ -2,15 +2,17 @@ import {Launch} from "./Launch";
 import {useEffect, useState} from "react";
 import {spaceService} from "../../services/spaceService";
 
-const Launches = () => {
+ export  const Launches = () => {
 
     const [launches, setLaunches] = useState([])
 
     useEffect(() => {
-        spaceService.getAll().then(({data}) => {
+        spaceService.getAll().then(
+            ({data}) => {
             const filtered = data.filter(item => item.launch_year !== '2020')
             setLaunches(filtered)
-        })
+        }
+        )
 
     }, [])
     return (
@@ -22,5 +24,5 @@ const Launches = () => {
     );
 };
 
-export {Launches};
+
 

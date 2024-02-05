@@ -1,5 +1,4 @@
-const Launch = ({item}) => {
-
+ export const Launch = ({item}) => {
 
     const {mission_name, launch_year, links: {mission_patch_small} } = item
 
@@ -12,6 +11,3 @@ const Launch = ({item}) => {
         </div>
     );
 };
-
-export {Launch};
-
