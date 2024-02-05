@@ -6,10 +6,8 @@ import {PostDetails} from "../PostDetails/PostDetails";
 
 const Posts = () => {
 
-
     const [posts, setPosts] = useState([])
     const [postDetails, setPostDetails] = useState(null)
-
 
     const click = async (postId) => {
         const {data} = await postService.getById(postId)
@@ -22,10 +20,12 @@ const Posts = () => {
     return (
         <div>
             <div className={css.Posts}>
-                {posts.map(post => <Post postItem={post} key={post.id} click={click}/>)}
+                {
+                    posts.map(post => <Post postItem={post} key={post.id} click={click}/>)
+                }
             </div>
             {
-                postDetails && <PostDetails postDetails={ postDetails}/>
+                postDetails && <PostDetails postDetails={postDetails}/>
             }
         </div>
 
