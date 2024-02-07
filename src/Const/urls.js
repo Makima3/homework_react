@@ -3,12 +3,12 @@ const baseURL = 'http://owu.linkpc.net/carsAPI/v1'
 const cars = '/cars'
 
 const urls = {
-    cars:{
+    cars: {
         base: cars,
-        byId:(id)=> `${cars}/${id}`
+        byId: (id) => `${cars}/${id}`
     }
 }
-export {
+ export {
     baseURL,
-    urls
-}
+     urls
+ }

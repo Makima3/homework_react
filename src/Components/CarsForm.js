@@ -5,23 +5,23 @@ import {joiResolver} from "@hookform/resolvers/joi";
 import {carValidator} from "../ Validators/carValidator";
 
 
-const CarsForm = ({setTrigger, carForUpdate}) => {
+export const CarsForm = ({setTrigger, carForUpdate, setCarFotUpdate}) => {
     const {register, reset, handleSubmit, formState: {isValid, errors}, setValue} = useForm({
-        mode:"all",
+        mode: "all",
         resolver: joiResolver(carValidator)
     });
 
 
-    useEffect(()=>{
-        if (carForUpdate){
+    useEffect(() => {
+        if (carForUpdate) {
             setValue('brand', carForUpdate.brand, {shouldDirty: true})
             setValue('price', carForUpdate.price, {shouldValidate: true})
             setValue('year', carForUpdate.year, {shouldValidate: true})
         }
 
-    }, [carForUpdate])
+    }, [carForUpdate, setValue])
 
-    const save = async (car)=>{
+    const save = async (car) => {
         await carService.create(car)
         setTrigger(prev => !prev)
         reset()
@@ -29,18 +29,18 @@ const CarsForm = ({setTrigger, carForUpdate}) => {
 
     const update = async (car) => {
         await carService.updateById(carForUpdate.id, car)
-        setTrigger()
+        setTrigger(prev => !prev)
+        setCarFotUpdate(null)
         reset()
-
     }
 
     return (
         <>
-            <form onSubmit={handleSubmit(carForUpdate? update: save)}>
+            <form onSubmit={handleSubmit(carForUpdate ? update : save)}>
                 <input type="text" placeholder={'brand'} {...register('brand')}/>
-                <input type="text" placeholder={'price'} {...register('price',{valueAsNumber: true})}/>
-                <input type="text" placeholder={'year'} {...register('year', {valueAsNumber: true })}/>
-                <button disabled={!isValid}>{carForUpdate? "Update" : "Save"}</button>
+                <input type="text" placeholder={'price'} {...register('price', {valueAsNumber: true})}/>
+                <input type="text" placeholder={'year'} {...register('year', {valueAsNumber: true})}/>
+                <button disabled={!isValid}>{carForUpdate ? 'Update' : 'Save'}</button>
             </form>
             {errors.brand && <div>{errors.brand.message}</div>}
             {errors.price && <div>{errors.price.message}</div>}
@@ -49,6 +49,4 @@ const CarsForm = ({setTrigger, carForUpdate}) => {
     );
 
 };
-
-export {CarsForm};
 
