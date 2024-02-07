@@ -1,13 +1,13 @@
 import {useForm} from "react-hook-form";
 import css from './UserForm.module.css'
-import {usersService} from "../../Services/UsersService";
+import {usersService} from "../../Services/usersService";
 
 export const UserForm = ({setUsers}) => {
     const {reset, register, handleSubmit} = useForm();
 
-    const save =  async (user) => {
-        const {data}= await usersService.create(user);
-        setUsers(prev =>[...prev, data])
+    const save = async (user) => {
+        const {data} = await usersService.create(user);
+        setUsers(prev => [...prev, data])
         reset()
     }
 

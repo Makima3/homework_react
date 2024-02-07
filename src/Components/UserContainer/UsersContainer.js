@@ -1,9 +1,9 @@
 import {UserForm} from "./UserForm";
 import {Users} from "./Users";
 import {useEffect, useState} from "react";
-import {usersService} from "../../Services/UsersService";
+import {usersService} from "../../Services/usersService";
 
-const UsersContainer = () => {
+export const UsersContainer = () => {
     const [users, setUsers] = useState([])
 
     useEffect(() => {
@@ -20,6 +20,3 @@ const UsersContainer = () => {
         </div>
     );
 };
-
-export {UsersContainer};
-

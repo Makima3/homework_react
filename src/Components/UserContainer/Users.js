@@ -1,6 +1,5 @@
 import {User} from "./User";
-
-const Users = ({users}) => {
+ export const Users = ({users}) => {
     return (
         <div>
             {
@@ -9,6 +8,3 @@ const Users = ({users}) => {
         </div>
     );
 };
-
-export {Users};
-

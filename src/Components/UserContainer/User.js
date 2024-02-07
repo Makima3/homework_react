@@ -1,5 +1,5 @@
-const User = ({user}) => {
-    const {id, name, username, email}= user
+export const User = ({user}) => {
+    const {id, name, username, email} = user
     return (
         <div>
             <div>id:{id}</div>
@@ -11,6 +11,3 @@ const User = ({user}) => {
         </div>
     );
 };
-
-export {User};
-
