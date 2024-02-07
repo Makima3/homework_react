@@ -1,11 +1,9 @@
 const baseURL = 'https://jsonplaceholder.typicode.com/'
+const comments = '/comments'
 
-const comments ='/comments'
-
-const urls ={
+const urls = {
     comments
 }
-
 export {
     baseURL,
     urls
