@@ -16,7 +16,7 @@ const CarsContainer = () => {
 
     return (
         <div>
-            <CarsForm trigger={trigger} carForUpdate={carForUpdate}/>
+            <CarsForm setTrigger={setTrigger} carForUpdate={carForUpdate}/>
             <hr/>
             <Cars cars={cars} setCarForUpdate={setCarForUpdate}/>
         </div>
