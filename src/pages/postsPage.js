@@ -1,6 +1,6 @@
-import {Posts} from "../components/PostContain/Posts";
+import {Posts} from "../Components/PostContain/Posts";
 import {useLocation} from "react-router-dom";
-import css from "../components/PostContain/Post.module.css"
+import css from "../Components/PostContain/Post.module.css"
 
 export const PostPage = () => {
 
