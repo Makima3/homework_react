@@ -11,7 +11,7 @@ const urls ={
     comments,
     posts:{
         base:posts,
-        byPostId:(postId)=> `${posts}/${postId}/posts`
+        byPostId:(postId)=> `${posts}/${postId}`
     }
 }
 
