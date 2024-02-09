@@ -1,4 +1,5 @@
 .Album {
     border: darkred  dashed 2px;
     font-size: 25px;
+    background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
 }

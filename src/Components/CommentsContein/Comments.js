@@ -1,23 +1,21 @@
 import {useEffect, useState} from "react";
-import {commentsService} from "../../Services/commentsService";
+import {commentsService} from "../../services/commentsService";
 import {Comment} from "./Comment";
 
-const Comments = () => {
+export const Comments = () => {
 
-    const [comments, setComments]=useState([])
+    const [comments, setComments] = useState([])
 
-    useEffect(()=>{
-        commentsService.getAll().then(({data})=> setComments(data))
+    useEffect(() => {
+        commentsService.getAll().then(({data}) => setComments(data))
     }, [])
-
 
     return (
         <div>
-            {comments.map(comment=> <Comment key={comment.id} comment={comment}/>)}
-
+            {
+                comments.map(comment => <Comment key={comment.id} comment={comment}/>)
+            }
         </div>
     );
 };
-
-export {Comments};
 

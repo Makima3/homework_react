@@ -1,6 +1,7 @@
 .Comment{
     border: dashed 2px darkred;
     font-size: 25px;
+    background: linear-gradient(99deg, rgba(79,104,242,1) 0%, rgba(178,79,213,1) 100%);
 }
 
 

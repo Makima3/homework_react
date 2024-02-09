@@ -1,7 +1,7 @@
 import css from './List.module.css'
 
-const List = ({list}) => {
-    const{userId, id, title, completed}=list
+export const List = ({list}) => {
+    const {userId, id, title, completed} = list
 
     return (
         <>
@@ -13,9 +13,6 @@ const List = ({list}) => {
             </div>
             <hr/>
         </>
-
     );
 };
-
-export {List};
 

@@ -1,7 +1,7 @@
 import css from './Header.module.css'
 import {NavLink} from "react-router-dom";
 
-const Header = () => {
+export const Header = () => {
     return (
         <div className={css.Header}>
             <NavLink to={"/todos"}>List</NavLink>
@@ -10,6 +10,3 @@ const Header = () => {
         </div>
     );
 };
-
-export {Header};
-

@@ -1,7 +1,11 @@
-import  css from './Comment.module.css'
+import css from './Comment.module.css'
+import {useNavigate} from "react-router-dom";
 
-const Comment = ({comment}) => {
-    const {postId,id, name, email, body}=comment
+export const Comment = ({comment}) => {
+    const {postId, id, name, email, body} = comment
+
+    const navigate = useNavigate()
+
     return (
         <>
             <div className={css.Comment}>
@@ -10,13 +14,9 @@ const Comment = ({comment}) => {
                 <div>name: {name}</div>
                 <div>email: {email}</div>
                 <div>body: {body}</div>
-                <button className={css.Button}>Show posts</button>
+                <button onClick={() => navigate('posts', {state: postId})} className={css.Button}>Show posts</button>
             </div>
             <hr/>
         </>
-
     );
 };
-
-export {Comment};
-

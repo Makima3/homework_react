@@ -1,22 +1,20 @@
 import {useEffect, useState} from "react";
-import {postService} from "../../Services/postService";
+import {postService} from "../../services/postService";
 import {Post} from "./Post";
 
-const Posts = () => {
+export const Posts = ({postId}) => {
 
-    const [post, setPost]=useState([])
+    const [posts, setPosts] = useState([])
 
-    useEffect(()=>{
-        postService.getByPostId().then(({data})=> setPost(data))
-    }, [])
-
+    useEffect(() => {
+        postService.getByPostId(postId).then(({data}) => setPosts(data))
+    }, [postId])
 
     return (
         <div>
-            {post && <Post post={post}/>}
+            {
+                Array.isArray(posts) && posts.map(post => <Post key={post.id} post={post}/>)
+            }
         </div>
     );
 };
-
-export {Posts};
-
