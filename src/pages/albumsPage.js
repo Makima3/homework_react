@@ -1,5 +1,5 @@
-import {Albums} from "../Components/AlbumsContein/Albums";
-import css from "../Components/AlbumsContein/Album.module.css"
+import {Albums} from "../components/AlbumsContein/Albums";
+import css from "../components/AlbumsContein/Album.module.css"
 
  export const AlbumsPage = () => {
     return (

@@ -1,6 +1,6 @@
-import {Comments} from "../Components/CommentsContein/Comments";
+import {Comments} from "../components/CommentsContein/Comments";
 import {Outlet} from "react-router-dom";
-import css from "../Components/CommentsContein/Comment.module.css"
+import css from "../components/CommentsContein/Comment.module.css"
 
 export const CommentsPage = () => {
     return (

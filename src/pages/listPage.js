@@ -1,5 +1,5 @@
-import {Lists} from "../Components/ListContein/Lists";
-import css from "../Components/ListContein/List.module.css"
+import {Lists} from "../components/ListContein/Lists";
+import css from "../components/ListContein/List.module.css"
 
 export const ListPage = () => {
     return (
