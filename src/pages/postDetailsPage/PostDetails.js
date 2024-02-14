@@ -1,4 +1,4 @@
-export const postDetails = () => {
+export const PostDetails = () => {
     return (
         <div>
             postDet

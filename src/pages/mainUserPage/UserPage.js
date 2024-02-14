@@ -1,4 +1,4 @@
-export const userPage = () => {
+export const UserPage = () => {
     return (
         <div>
             user page

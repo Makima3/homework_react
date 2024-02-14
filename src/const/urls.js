@@ -5,7 +5,6 @@ const comments = '/comments'
 const posts = '/posts'
 
 const urls = {
-    comments,
 
     users: {
         base: users,
@@ -13,9 +12,13 @@ const urls = {
     },
 
     posts: {
-        base: posts,
-        byId: (id) => `${posts}/${id}`
-    }
+        byUserId: (userId) => `${users}/${userId}/${posts}`
+    },
+
+    comments: {
+
+        byPostId: (postId) => `${posts}/${postId}/${comments}`
+    },
 }
 
 export {
