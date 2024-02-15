@@ -1,17 +1,12 @@
-import {useEffect, useState} from "react";
-import {userService} from "../../services/userService";
+import {User} from "./User";
 
-export const Users = () => {
-
-    const [users, setUsers] = useState([])
-
-    useEffect(()=>{
-        userService.getAll()
-    },[])
+export const Users = ({users}) => {
 
     return (
         <div>
-            App
+            {
+                users.map(user => <User key={user.id} user={user}/>)
+            }
         </div>
     );
 };
