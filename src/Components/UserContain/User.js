@@ -1,5 +1,4 @@
 import {useNavigate} from "react-router-dom";
-
 export const User = ({user}) => {
     const {id, name} = user
     const navigate = useNavigate()
@@ -7,7 +6,7 @@ export const User = ({user}) => {
         <div>
             <div>ID: {id}</div>
             <div>NAME: {name}</div>
-            <button onClick={()=> navigate(`/users/${id}`)}>User details</button>
+            <button onClick={() => navigate(`/users/${id}`)}>User details</button>
             <hr/>
             <hr/>
         </div>
