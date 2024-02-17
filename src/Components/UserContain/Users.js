@@ -1,7 +1,6 @@
 import {User} from "./User";
 
 export const Users = ({users}) => {
-
     return (
         <div>
             {
@@ -10,4 +9,3 @@ export const Users = ({users}) => {
         </div>
     );
 };
-

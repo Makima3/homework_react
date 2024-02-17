@@ -2,7 +2,6 @@ import {useNavigate} from "react-router-dom";
 
 export const Detail = ({user}) => {
     const {id, name, username, email, address: {street, city, zipcode}, phone, website} = user
-
     const navigate = useNavigate()
     return (
         <div>
@@ -16,8 +15,7 @@ export const Detail = ({user}) => {
             <div>ZIPCODE: {zipcode}</div>
             <div>PHONE: {phone}</div>
             <div>WEBSITE: {website}</div>
-            <button onClick={() => navigate(`/posts/${id}`)}>Post of current user</button>
+            <button onClick={() => navigate(`posts`)}>Post of current user</button>
         </div>
     );
 };
-

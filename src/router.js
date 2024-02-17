@@ -4,7 +4,8 @@ import {MainUserPage} from "./pages/MainUserPage";
 import {userService} from "./services/userService";
 import {NextUserPage} from "./pages/NextUserPage";
 import {BelowPostPage} from "./pages/BelowPostPage";
-import {postSrvice} from "./services/postSrvice";
+import {postService} from "./services/postService";
+import {LastCommentPage} from "./pages/LastCommentPage";
 
 export const router = createBrowserRouter([
     {
@@ -16,9 +17,10 @@ export const router = createBrowserRouter([
                 loader: ({params: {id}}) => userService.getById(id),
                 element: <NextUserPage/>,
                 children: [
-                    {path: 'posts', loader: ({params: {id}}) => postSrvice.getById(id), element: <BelowPostPage/>}
+                    {path: 'posts', loader: ({params: {id}}) => postService.getByUserId(id), element: <BelowPostPage/>}
                 ]
-            }
+            },
+            {path: 'posts/:id', loader: ({params: {id}}) => postService.getById(id), element: <LastCommentPage/>}
         ]
     }
 ])

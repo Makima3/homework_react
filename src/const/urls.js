@@ -9,12 +9,12 @@ const urls = {
         byId: (id) => `${users}/${id}`
     },
     posts: {
-        base: posts,
-        byUserId: (userId) => `${posts}/${userId}`
+        byId: (id) => `${posts}/${id}`,
+        byUserId: (userId) => `${users}/${userId}${posts}`
     },
     comments: {
         base: comments,
-        byPostId: (postId) => `${posts}/${postId}`
+        byPostId: (postId) => `${posts}/${postId}${comments}`
     }
 }
 

@@ -1,7 +1,11 @@
-export const PostDetailContain = () => {
+export const PostDetailContain = ({item}) => {
+    const {id, userId, title, body} = item
     return (
         <div>
-            post contain
+            <div>Id: {id}</div>
+            <div>UserId: {userId}</div>
+            <div>Title: {title}</div>
+            <div>Body: {body}</div>
         </div>
     );
 };
