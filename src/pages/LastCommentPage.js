@@ -20,7 +20,9 @@ export const LastCommentPage = () => {
             <hr/>
             <hr/>
             <hr/>
-            <Comment comment={comments}/>
+            {
+                comments.map(comment => <Comment key={comment.id} comment={comment}/>)
+            }
         </div>
     );
 };

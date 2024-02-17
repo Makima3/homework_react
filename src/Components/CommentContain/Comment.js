@@ -7,6 +7,8 @@ export const Comment = ({comment}) => {
             <div>name: {name}</div>
             <div>email: {email}</div>
             <div>body: {body}</div>
+            <hr/>
+            <hr/>
         </div>
     );
 };
