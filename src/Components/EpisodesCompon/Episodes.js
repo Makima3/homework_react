@@ -38,8 +38,8 @@ export const Episodes = () => {
                 }
             </div>
             <div>
-                <button disabled={!page.prev} onClick={prev} className={css.button}>Prev</button>
-                <button disabled={!page.next} onClick={next} className={css.button}>Next</button>
+                <button disabled={!page.prev} onClick={prev} className={css.button}><b>Prev</b></button>
+                <button disabled={!page.next} onClick={next} className={css.button}><b>Next</b></button>
             </div>
         </>
     );

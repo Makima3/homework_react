@@ -1,7 +1,11 @@
-export const Character = () => {
+export const Character = ({character}) => {
+    const {id, name, image} = character
     return (
         <div>
-            App
+            <div>ID: {id}</div>
+            <div>NAME: {name}</div>
+            <img src={image} alt={name}/>
+            <hr/>
         </div>
     );
 };
