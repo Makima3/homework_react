@@ -5,13 +5,12 @@ import {useParams} from "react-router-dom";
 
 export const Chracters = () => {
 
-    const {ids}=useParams()
-
+    const {ids} = useParams()
     const [characters, setCharacters] = useState([])
 
-    useEffect(()=>{
-        characterService.getByIds(ids).then(({data})=> setCharacters(data))
-    },[ids])
+    useEffect(() => {
+        characterService.getByIds(ids).then(({data}) => setCharacters(data))
+    }, [ids])
 
     return (
         <div>

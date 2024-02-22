@@ -7,9 +7,9 @@ import {ContextProvider} from "./hoc";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-
     <ContextProvider>
         <RouterProvider router={router}/>
     </ContextProvider>
+
 );
 
