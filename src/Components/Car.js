@@ -1,4 +1,4 @@
-import {carService} from "../Services/carService";
+import {carService} from "../services/carService";
 
 export const Car = ({car, setCarForUpdate, setTrigger}) => {
     const {id, brand, price, year} = car

@@ -1,5 +1,5 @@
 import {useForm} from "react-hook-form";
-import {carService} from "../Services/carService";
+import {carService} from "../services/carService";
 import {useEffect} from "react";
 import {joiResolver} from "@hookform/resolvers/joi";
 import {carValidator} from "../ Validators/carValidator";

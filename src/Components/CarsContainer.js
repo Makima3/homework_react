@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {carService} from "../Services/carService";
+import {carService} from "../services/carService";
 import {CarsForm} from "./CarsForm";
 import {Cars} from "./Cars";
 
