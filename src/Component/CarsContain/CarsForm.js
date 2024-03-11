@@ -1,8 +1,10 @@
 export const CarsForm = () => {
     return (
-        <div>
-            App
-        </div>
+        <form>
+            <input/>
+            <input/>
+            <input/>
+        </form>
     );
 };
 
